@@ -5,5 +5,5 @@ export const iShape = {
     { x: 0, y: 2 },
     { x: 0, y: 3 },
   ],
-  color: 'violet'
+  color: 'violet',
 };

@@ -5,5 +5,5 @@ export const tShape = {
     { x: 1, y: 1 },
     { x: 0, y: 2 },
   ],
-  color: 'green'
+  color: 'green',
 };

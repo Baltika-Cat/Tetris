@@ -1,4 +1,4 @@
-import { Shape } from "../shared/types";
+import type { Shape } from '../shared/types';
 
 export const lShape: Shape = {
   position: [
@@ -9,4 +9,3 @@ export const lShape: Shape = {
   ],
   color: 'blue',
 };
-
