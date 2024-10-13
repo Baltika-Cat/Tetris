@@ -4,6 +4,6 @@ export interface Position {
 }
 
 export interface Shape {
-  position: Position[],
-  color: string,
+  position: Position[];
+  color: string;
 }
