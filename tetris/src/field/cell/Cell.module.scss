@@ -1,6 +1,6 @@
 .cell {
   display: flex;
-  width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   border: 2px solid black;
+  box-sizing: border-box;
 }

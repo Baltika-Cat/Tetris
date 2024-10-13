@@ -1,13 +1,27 @@
 import type React from 'react';
 
-import classes from './Field.module.scss';
-import { COLUMN_COUNT, ROW_COUNT } from './field-size';
+import { CELL_WIDTH } from '../shared/consts';
+import type { FieldProps } from '../shared/types';
+import { Cell } from './cell/Cell';
 
-export const Field: React.FC = () => {
+export const Field: React.FC<FieldProps> = ({ fieldProps }) => {
   return (
     <div
-      className={classes.field}
-      style={{ gridTemplateRows: ROW_COUNT, gridTemplateColumns: COLUMN_COUNT }}
-    />
+      style={{
+        display: 'grid',
+        gridTemplateColumns: `repeat(${String(fieldProps[0].length)}, ${String(CELL_WIDTH)}px)`,
+      }}
+    >
+      {fieldProps.map((row, rowIndex) =>
+        row.map((color, columnIndex) => {
+          return (
+            <Cell
+              key={`${String(rowIndex)}-${String(columnIndex)}`}
+              color={color}
+            />
+          );
+        })
+      )}
+    </div>
   );
 };
